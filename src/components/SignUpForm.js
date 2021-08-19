@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { userSignUp } from '../redux/actions/userActions';
 
 const SignUpForm = ({ userSignUp }) => {
@@ -40,6 +41,10 @@ const SignUpForm = ({ userSignUp }) => {
         <input onChange={handleChange} type="password" name="password_confirmation" placeholder="Confirm Your password" value={credentials.password_confirmation} />
         <button type="submit">Sign In</button>
       </form>
+      <footer>
+        Already a member?
+        <Link to="/signin">Sign In</Link>
+      </footer>
     </>
   );
 };
