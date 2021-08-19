@@ -1,7 +1,8 @@
-import { USER_SIGN_IN, USER_SIGN_UP } from '../types';
+import { USER_SIGN_IN, USER_SIGN_UP, IS_LOGGED_IN } from '../types';
 
 const initialState = {
   user: {},
+  session: { logged_in: false },
 };
 
 const userReducer = (state = initialState, action) => {
@@ -15,6 +16,11 @@ const userReducer = (state = initialState, action) => {
       return {
         ...state,
         user: action.payload,
+      };
+    case IS_LOGGED_IN:
+      return {
+        ...state,
+        session: action.payload,
       };
     default:
       return state;
