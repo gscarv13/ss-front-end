@@ -1,8 +1,10 @@
+import { connect } from 'react-redux';
 import { useState } from 'react';
-import axios from 'axios';
-import { BASE_URL, SESSIONS_PATH } from '../helpers/enpoints';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { userSignIn } from '../redux/actions/userActions';
 
-const AuthForm = () => {
+const SignInForm = ({ userSignIn }) => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
 
   const handleChange = (e) => {
@@ -14,23 +16,10 @@ const AuthForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const { email, password } = credentials;
     const loginDetails = {
-      user: { email, password },
+      user: { ...credentials },
     };
-
-    const url = BASE_URL + SESSIONS_PATH;
-    const config = {
-      auth: { ...loginDetails },
-      withCredentials: true,
-    };
-    try {
-      const data = await axios.post(url, loginDetails, config);
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
+    userSignIn(loginDetails);
   };
 
   return (
@@ -41,8 +30,16 @@ const AuthForm = () => {
         <input onChange={handleChange} type="password" name="password" placeholder="Password" value={credentials.password} />
         <button type="submit">Sign In</button>
       </form>
+      <footer>
+        Not a member yet?
+        <Link to="/signup">Sign Up Here</Link>
+      </footer>
     </>
   );
 };
 
-export default AuthForm;
+SignInForm.propTypes = {
+  userSignIn: PropTypes.func.isRequired,
+};
+
+export default connect(null, { userSignIn })(SignInForm);

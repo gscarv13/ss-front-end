@@ -8,7 +8,8 @@ import Navigation from './components/Navgation';
 import Activities from './views/Activities';
 import Schedules from './views/Schedules';
 import './assets/App.css';
-import AuthForm from './components/AuthForm';
+import LoginForm from './components/SignInForm';
+import SignUpForm from './components/SignUpForm';
 
 function App() {
   return (
@@ -20,13 +21,14 @@ function App() {
             <div>
               Welcome!
               {' '}
-              <Link to="/auth">Login / Sign Up</Link>
+              <Link to="/signin">Login / Sign Up</Link>
             </div>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/activities" component={Activities} />
               <Route exact path="/schedules" component={Schedules} />
-              <Route exact path="/auth" component={AuthForm} />
+              <Route exact path="/signin" component={LoginForm} />
+              <Route exact path="/signup" component={SignUpForm} />
             </Switch>
           </main>
         </BrowserRouter>
