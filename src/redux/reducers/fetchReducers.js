@@ -1,6 +1,9 @@
 import { FETCH_ACTIVITIES, FETCH_SCHEDULES } from '../types';
 
-const initialState = {};
+const initialState = {
+  activities: [{}],
+  schedules: [{}],
+};
 
 const fetchReducer = (state = initialState, action) => {
   switch (action.type) {
