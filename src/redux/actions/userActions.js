@@ -14,7 +14,7 @@ export const userSignIn = (loginDetails) => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
-    console.log(err);
+    throw new Error(err);
   }
 };
 
@@ -42,12 +42,16 @@ export const isLoggedIn = () => async (dispatch) => {
     } else {
       result = response.data;
     }
-  } catch (err) {
-    throw new Error(err);
+    dispatch({
+      type: IS_LOGGED_IN,
+      payload: result,
+    });
+  } catch (error) {
+    dispatch({
+      type: IS_LOGGED_IN,
+      payload: error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message,
+    });
   }
-
-  dispatch({
-    type: IS_LOGGED_IN,
-    payload: result,
-  });
 };

@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { userSignUp } from '../redux/actions/userActions';
+import { userSignUp, isLoggedIn } from '../redux/actions/userActions';
 
-const SignUpForm = ({ userSignUp }) => {
+const SignUpForm = ({ userSignUp, isLoggedIn }) => {
   const initialState = {
     first_name: '',
     last_name: '',
@@ -27,7 +27,7 @@ const SignUpForm = ({ userSignUp }) => {
     const signUpDetails = {
       user: { ...credentials },
     };
-    userSignUp(signUpDetails);
+    userSignUp(signUpDetails).then(() => isLoggedIn());
   };
 
   return (
@@ -51,6 +51,7 @@ const SignUpForm = ({ userSignUp }) => {
 
 SignUpForm.propTypes = {
   userSignUp: PropTypes.func.isRequired,
+  isLoggedIn: PropTypes.func.isRequired,
 };
 
-export default connect(null, { userSignUp })(SignUpForm);
+export default connect(null, { userSignUp, isLoggedIn })(SignUpForm);
