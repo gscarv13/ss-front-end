@@ -1,6 +1,9 @@
 import axios from 'axios';
-import { USER_SIGN_IN, USER_SIGN_UP, IS_LOGGED_IN } from '../types';
+import {
+  USER_SIGN_IN, USER_SIGN_IN_FAIL, USER_SIGN_UP, USER_SIGN_UP_FAIL, IS_LOGGED_IN,
+} from '../types';
 import { BASE_URL, SESSIONS_PATH, REGISTRATION_PATH } from '../../helpers/enpoints';
+import handleRequestError from '../../helpers/handleRequestError';
 
 const axiosConfig = { withCredentials: true };
 
@@ -14,7 +17,10 @@ export const userSignIn = (loginDetails) => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
-    throw new Error(err);
+    dispatch({
+      type: USER_SIGN_IN_FAIL,
+      payload: handleRequestError(err),
+    });
   }
 };
 
@@ -28,7 +34,10 @@ export const userSignUp = (registrationDetails) => async (dispatch) => {
       payload: res.data,
     });
   } catch (err) {
-    throw new Error(err);
+    dispatch({
+      type: USER_SIGN_UP_FAIL,
+      payload: handleRequestError(err),
+    });
   }
 };
 
@@ -49,9 +58,7 @@ export const isLoggedIn = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: IS_LOGGED_IN,
-      payload: error.response && error.response.data.message
-        ? error.response.data.message
-        : error.message,
+      payload: handleRequestError(error),
     });
   }
 };
