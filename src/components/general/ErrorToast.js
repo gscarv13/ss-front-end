@@ -1,16 +1,16 @@
 import PropType from 'prop-types';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from 'react';
 
-const ErrorToast = ({ error }) => (
-  <ToastContainer>
-    {
-      toast(error, {
-        className: 'error-toast',
-      })
-    }
-  </ToastContainer>
-);
+const ErrorToast = ({ error }) => {
+  useEffect(() => {
+    toast(error, {
+      className: 'error-toast',
+    });
+  }, [error]);
+  return <ToastContainer />;
+};
 
 ErrorToast.propTypes = {
   error: PropType.string.isRequired,
