@@ -19,6 +19,7 @@ const userReducer = (state = initialState, action) => {
     case USER_SIGN_IN_SUCCESS:
       return {
         loading: false,
+        success: true,
         user: action.payload,
       };
     case USER_SIGN_IN_FAIL:
@@ -34,6 +35,7 @@ const userReducer = (state = initialState, action) => {
     case USER_SIGN_UP_SUCCESS:
       return {
         loading: false,
+        success: true,
         user: action.payload,
       };
     case USER_SIGN_UP_FAIL:

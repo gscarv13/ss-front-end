@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { userSignIn } from '../redux/actions/userActions';
 import Loading from './Loading';
@@ -10,7 +10,7 @@ const SignInForm = () => {
   const dispatch = useDispatch();
   const userDispatchResults = useSelector((state) => state.userObject);
 
-  const { error, loading } = userDispatchResults;
+  const { error, loading, success } = userDispatchResults;
 
   const handleChange = (e) => {
     setCredentials({
@@ -24,6 +24,7 @@ const SignInForm = () => {
     const loginDetails = {
       user: { ...credentials },
     };
+
     dispatch(userSignIn(loginDetails));
   };
 
@@ -44,7 +45,8 @@ const SignInForm = () => {
                 Not a member yet?
                 <Link to="/signup">Sign Up Here</Link>
               </footer>
-              { error ? <ErrorToast error={error} /> : null }
+              {error && <ErrorToast error={error} />}
+              {success && <Redirect to="/" />}
             </div>
           )
       }
