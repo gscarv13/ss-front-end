@@ -1,30 +1,36 @@
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { fetchSchedules } from '../redux/actions/fetchActions';
+import fetchSchedulesAction from '../redux/actions/scheduleActions';
+import Loading from '../components/Loading';
+import ErrorToast from '../components/ErrorToast';
 
-const Schedules = ({ schedules, fetchSchedules }) => {
+const Schedules = () => {
+  const dispatch = useDispatch();
+  const schedulesDispatchResult = useSelector((state) => state.schedulesStateObject);
+  const { schedules, error, loading } = schedulesDispatchResult;
+
   useEffect(() => {
-    fetchSchedules();
+    dispatch(fetchSchedulesAction());
   }, []);
 
   return (
-    <>
-      <h1>SCHEDULES</h1>
-      <div>
-        {schedules.map((item) => <p key={item.id}>{item.date}</p>)}
-      </div>
-    </>
+    <div>
+      {
+        loading
+          ? <Loading />
+          : (
+            <>
+              <h1>SCHEDULES</h1>
+              <div>
+                {schedules.map((item) => <p key={item.id}>{item.date}</p>)}
+              </div>
+              {error && <ErrorToast error={error} />}
+            </>
+          )
+
+      }
+    </div>
   );
 };
 
-Schedules.propTypes = {
-  schedules: PropTypes.arrayOf(PropTypes.object).isRequired,
-  fetchSchedules: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  schedules: state.fetchReducersObject.schedules,
-});
-
-export default connect(mapStateToProps, { fetchSchedules })(Schedules);
+export default Schedules;
