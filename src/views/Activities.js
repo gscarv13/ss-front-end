@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import fetchActivitiesAction from '../redux/actions/activitiesActions';
-import Loading from '../components/Loading';
-import ErrorToast from '../components/ErrorToast';
+import Loading from '../components/general/Loading';
+import ErrorToast from '../components/general/ErrorToast';
 
 const Activities = () => {
   const dispatch = useDispatch();

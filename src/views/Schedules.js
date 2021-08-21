@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import fetchSchedulesAction from '../redux/actions/scheduleActions';
-import Loading from '../components/Loading';
-import ErrorToast from '../components/ErrorToast';
+import Loading from '../components/general/Loading';
+import ErrorToast from '../components/general/ErrorToast';
 
 const Schedules = () => {
   const dispatch = useDispatch();

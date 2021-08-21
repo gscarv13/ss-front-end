@@ -2,8 +2,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { userSignUp } from '../redux/actions/userActions';
-import Loading from './Loading';
-import ErrorToast from './ErrorToast';
+import Loading from './general/Loading';
+import ErrorToast from './general/ErrorToast';
 
 const SignUpForm = () => {
   const initialState = {

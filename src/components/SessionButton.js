@@ -4,7 +4,6 @@ import WelcomeUser from './WelcomeUser';
 import AuthenticateButton from './AuthenticateButton';
 
 const SessionButton = ({ user, loggedIn }) => {
-  console.log(loggedIn);
   if (loggedIn) {
     return <WelcomeUser user={user} />;
   }
@@ -21,7 +20,7 @@ SessionButton.propTypes = {
 
 const mapStateToProps = (state) => ({
   user: state.userObject.user,
-  loggedIn: state.userObject.session.logged_in,
+  loggedIn: state.userObject.logged_in,
 });
 
 export default connect(mapStateToProps)(SessionButton);
