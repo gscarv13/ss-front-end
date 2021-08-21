@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { FETCH_ACTIVITIES, FETCH_SCHEDULES } from '../types';
-import { BASE_URL, ACTIVITIES_PATH, SCHEDULES_PATH } from '../../helpers/enpoints';
+import { FETCH_ACTIVITIES, FETCH_SCHEDULES } from '../../constants/types';
+import { BASE_URL, ACTIVITIES_PATH, SCHEDULES_PATH } from '../../constants/enpoints';
 
 export const fetchSchedules = () => async (dispatch) => {
   const res = await axios.get(

@@ -1,4 +1,4 @@
-import { FETCH_ACTIVITIES, FETCH_SCHEDULES } from '../types';
+import { FETCH_ACTIVITIES, FETCH_SCHEDULES } from '../../constants/types';
 
 const initialState = {
   activities: [{}],

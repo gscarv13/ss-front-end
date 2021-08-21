@@ -1,11 +1,16 @@
-import { connect } from 'react-redux';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { isLoggedIn, userSignIn } from '../redux/actions/userActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { userSignIn } from '../redux/actions/userActions';
+import Loading from './Loading';
+import ErrorToast from './ErrorToast';
 
-const SignInForm = ({ userSignIn, isLoggedIn }) => {
+const SignInForm = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
+  const dispatch = useDispatch();
+  const userDispatchResults = useSelector((state) => state.userObject);
+
+  const { error, loading } = userDispatchResults;
 
   const handleChange = (e) => {
     setCredentials({
@@ -19,28 +24,32 @@ const SignInForm = ({ userSignIn, isLoggedIn }) => {
     const loginDetails = {
       user: { ...credentials },
     };
-    userSignIn(loginDetails).then(() => isLoggedIn());
+    dispatch(userSignIn(loginDetails));
   };
 
   return (
-    <>
-      <h1>Please sign in</h1>
-      <form onSubmit={handleSubmit}>
-        <input onChange={handleChange} type="email" name="email" placeholder="email" value={credentials.email} />
-        <input onChange={handleChange} type="password" name="password" placeholder="Password" value={credentials.password} />
-        <button type="submit">Sign In</button>
-      </form>
-      <footer>
-        Not a member yet?
-        <Link to="/signup">Sign Up Here</Link>
-      </footer>
-    </>
+    <div>
+      {
+        loading
+          ? <Loading />
+          : (
+            <div>
+              <h1>Please sign in</h1>
+              <form onSubmit={handleSubmit}>
+                <input onChange={handleChange} type="email" name="email" placeholder="email" value={credentials.email} />
+                <input onChange={handleChange} type="password" name="password" placeholder="Password" value={credentials.password} />
+                <button type="submit">Sign In</button>
+              </form>
+              <footer>
+                Not a member yet?
+                <Link to="/signup">Sign Up Here</Link>
+              </footer>
+              { error ? <ErrorToast error={error} /> : null }
+            </div>
+          )
+      }
+    </div>
   );
 };
 
-SignInForm.propTypes = {
-  userSignIn: PropTypes.func.isRequired,
-  isLoggedIn: PropTypes.func.isRequired,
-};
-
-export default connect(null, { userSignIn, isLoggedIn })(SignInForm);
+export default SignInForm;

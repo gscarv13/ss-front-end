@@ -1,39 +1,50 @@
 import {
-  USER_SIGN_IN, USER_SIGN_UP, IS_LOGGED_IN, USER_SIGN_IN_FAIL, USER_SIGN_UP_FAIL,
-} from '../types';
+  USER_SIGN_IN_REQUEST, USER_SIGN_IN_SUCCESS, USER_SIGN_IN_FAIL,
+  USER_SIGN_UP_REQUEST, USER_SIGN_UP_SUCCESS, USER_SIGN_UP_FAIL, IS_LOGGED_IN,
+} from '../../constants/types';
 
 const initialState = {
   user: {},
-  session: { logged_in: false },
+  logged_in: false,
   error: {},
 };
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case USER_SIGN_IN:
+    case USER_SIGN_IN_REQUEST:
       return {
-        ...state,
+        loading: true,
+        user: {},
+      };
+    case USER_SIGN_IN_SUCCESS:
+      return {
+        loading: false,
         user: action.payload,
       };
     case USER_SIGN_IN_FAIL:
       return {
-        ...state,
+        loading: false,
         error: action.payload,
       };
-    case USER_SIGN_UP:
+    case USER_SIGN_UP_REQUEST:
       return {
-        ...state,
+        loading: true,
+        user: {},
+      };
+    case USER_SIGN_UP_SUCCESS:
+      return {
+        loading: false,
         user: action.payload,
       };
     case USER_SIGN_UP_FAIL:
       return {
-        ...state,
+        loading: false,
         error: action.payload,
       };
     case IS_LOGGED_IN:
       return {
-        ...state,
-        session: action.payload,
+        logged_in: action.payload.logged_in,
+        user: action.payload.details,
       };
     default:
       return state;
