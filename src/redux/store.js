@@ -8,6 +8,7 @@ const currentUser = localStorage.getItem('user')
 
 const initialState = {
   userObject: currentUser,
+  schedulesStateObject: { schedules: [{}] },
 };
 const middleware = [thunk];
 

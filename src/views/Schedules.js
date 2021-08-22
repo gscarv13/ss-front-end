@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import fetchSchedulesAction from '../redux/actions/scheduleActions';
 import Loading from '../components/general/Loading';
 import ErrorToast from '../components/general/ErrorToast';
@@ -8,9 +9,9 @@ const Schedules = () => {
   const dispatch = useDispatch();
   const schedulesDispatchResult = useSelector((state) => state.schedulesStateObject);
   const { schedules, error, loading } = schedulesDispatchResult;
-
+  const { id } = useParams();
   useEffect(() => {
-    dispatch(fetchSchedulesAction());
+    dispatch(fetchSchedulesAction(id));
   }, []);
 
   return (

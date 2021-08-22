@@ -1,26 +1,37 @@
-import { connect } from 'react-redux';
-import PropType from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import WelcomeUser from './WelcomeUser';
-import AuthenticateButton from './AuthenticateButton';
+import { signOut } from '../redux/actions/userActions';
 
-const SessionButton = ({ user, loggedIn }) => {
-  if (loggedIn) {
-    return <WelcomeUser user={user} />;
-  }
-  return <AuthenticateButton />;
+const SessionButton = () => {
+  const dispatch = useDispatch();
+  const userState = useSelector((state) => state.userObject);
+  const { user } = userState;
+
+  const handleClick = () => {
+    dispatch(signOut());
+  };
+
+  return (
+    <div>
+      {
+        user
+          ? (
+            <>
+              <WelcomeUser user={user} />
+              <button type="button" onClick={handleClick}>LOGOUT</button>
+            </>
+          )
+          : (
+            <div>
+              Welcome!
+              {' '}
+              <Link to="/signin">Login / Sign Up</Link>
+            </div>
+          )
+      }
+    </div>
+  );
 };
 
-SessionButton.propTypes = {
-  user: PropType.oneOfType([
-    PropType.object.isRequired,
-    PropType.oneOf([null]),
-  ]).isRequired,
-  loggedIn: PropType.bool.isRequired,
-};
-
-const mapStateToProps = (state) => ({
-  user: state.userObject.user,
-  loggedIn: state.userObject.logged_in,
-});
-
-export default connect(mapStateToProps)(SessionButton);
+export default SessionButton;
