@@ -1,11 +1,10 @@
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import Cookies from 'js-cookie';
 import rootReducer from './reducers';
 
-const currentUser = Cookies.get('_session')
-  ? Cookies.get('_session').replaceAll('=>', ':').replaceAll('+', '')
-  : null;
+const currentUser = localStorage.getItem('user')
+  ? JSON.parse(localStorage.getItem('user'))
+  : {};
 
 const initialState = {
   userObject: currentUser,

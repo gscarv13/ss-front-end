@@ -1,9 +1,6 @@
 import {
   BrowserRouter, Route, Switch,
 } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import Home from './views/Home';
 import Navigation from './components/Navgation';
 import Activities from './views/Activities';
@@ -11,13 +8,9 @@ import Schedules from './views/Schedules';
 import './assets/App.css';
 import SignUpForm from './components/SignUpForm';
 import SessionButton from './components/SessionButton';
-import { isLoggedIn } from './redux/actions/userActions';
 import Authentication from './views/Authentication';
 
-function App({ isLoggedIn }) {
-  useEffect(() => {
-    isLoggedIn();
-  }, []);
+function App() {
   return (
     <div className="App">
       <BrowserRouter>
@@ -37,8 +30,4 @@ function App({ isLoggedIn }) {
   );
 }
 
-App.propTypes = {
-  isLoggedIn: PropTypes.func.isRequired,
-};
-
-export default connect(null, { isLoggedIn })(App);
+export default App;
