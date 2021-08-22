@@ -6,7 +6,8 @@ import { signOut } from '../redux/actions/userActions';
 const SessionButton = () => {
   const dispatch = useDispatch();
   const userState = useSelector((state) => state.userObject);
-  const { user } = userState;
+  const { user, loggedIn } = userState;
+  console.log(user);
 
   const handleClick = () => {
     dispatch(signOut());
@@ -15,10 +16,10 @@ const SessionButton = () => {
   return (
     <div>
       {
-        user
+        loggedIn
           ? (
             <>
-              <WelcomeUser user={user} />
+              <WelcomeUser user={user.user} />
               <button type="button" onClick={handleClick}>LOGOUT</button>
             </>
           )

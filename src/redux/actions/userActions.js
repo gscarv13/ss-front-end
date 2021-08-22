@@ -16,6 +16,7 @@ export const userSignIn = (loginDetails) => async (dispatch) => {
     const res = await axios.post(url, loginDetails, axiosConfig);
     dispatch({ type: USER_SIGN_IN_SUCCESS, payload: res.data });
     localStorage.setItem('user', JSON.stringify(res.data));
+    localStorage.setItem('loggedIn', JSON.stringify(true));
   } catch (err) {
     dispatch({ type: USER_SIGN_IN_FAIL, payload: err.response.data.error });
   }
@@ -28,6 +29,7 @@ export const userSignUp = (registrationDetails) => async (dispatch) => {
     const res = await axios.post(url, registrationDetails, axiosConfig);
     dispatch({ type: USER_SIGN_UP_SUCCESS, payload: res.data });
     localStorage.setItem('user', JSON.stringify(res.data));
+    localStorage.setItem('loggedIn', JSON.stringify(true));
   } catch (err) {
     dispatch({ type: USER_SIGN_UP_FAIL, payload: handleRequestError(err) });
   }
@@ -59,9 +61,10 @@ export const signOut = () => async (dispatch) => {
   const url = `${BASE_URL}/api/logout`;
   try {
     dispatch({ type: USER_SIGN_OUT_REQUEST });
-    const res = axios.delete(url);
+    const res = axios.delete(url, { withCredentials: true });
     dispatch({ type: USER_SIGN_OUT_SUCCESS, payload: res.data });
     localStorage.removeItem('user');
+    localStorage.removeItem('loggedIn');
   } catch (error) {
     dispatch({ type: USER_SIGN_OUT_FAIL, payload: error.request });
   }
