@@ -7,7 +7,6 @@ const SessionButton = () => {
   const dispatch = useDispatch();
   const userState = useSelector((state) => state.userObject);
   const { user, loggedIn } = userState;
-  console.log(user);
 
   const handleClick = () => {
     dispatch(signOut());
@@ -19,7 +18,7 @@ const SessionButton = () => {
         loggedIn
           ? (
             <>
-              <WelcomeUser user={user.user} />
+              <WelcomeUser user={user} />
               <button type="button" onClick={handleClick}>LOGOUT</button>
             </>
           )

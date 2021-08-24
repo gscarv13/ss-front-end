@@ -15,10 +15,10 @@ export const userSignIn = (loginDetails) => async (dispatch) => {
     dispatch({ type: USER_SIGN_IN_REQUEST });
     const res = await axios.post(url, loginDetails, axiosConfig);
     dispatch({ type: USER_SIGN_IN_SUCCESS, payload: res.data });
-    localStorage.setItem('user', JSON.stringify(res.data));
+    localStorage.setItem('user', JSON.stringify(res.data.user));
     localStorage.setItem('loggedIn', JSON.stringify(true));
   } catch (err) {
-    dispatch({ type: USER_SIGN_IN_FAIL, payload: err.response.data.error });
+    dispatch({ type: USER_SIGN_IN_FAIL, payload: err.response });
   }
 };
 
@@ -58,7 +58,7 @@ export const userSignUp = (registrationDetails) => async (dispatch) => {
 // };
 
 export const signOut = () => async (dispatch) => {
-  const url = `${BASE_URL}/api/logout`;
+  const url = `${BASE_URL}${SESSIONS_PATH}`;
   try {
     dispatch({ type: USER_SIGN_OUT_REQUEST });
     const res = axios.delete(url, { withCredentials: true });

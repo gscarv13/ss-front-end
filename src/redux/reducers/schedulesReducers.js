@@ -1,4 +1,6 @@
-import { FETCH_SCHEDULES_REQUEST, FETCH_SCHEDULES_SUCCESS, FETCH_SCHEDULES_FAIL } from '../../constants/types';
+import {
+  FETCH_SCHEDULES_REQUEST, FETCH_SCHEDULES_SUCCESS, FETCH_SCHEDULES_FAIL,
+} from '../../constants/types';
 
 const initialState = {
   schedules: [{}],
