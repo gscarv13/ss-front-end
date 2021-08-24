@@ -6,17 +6,19 @@ import formatDate from '../helpers/formatDate';
 import { createUserScheduleAction, fetchUserSchedulesAction, destroyUserScheduleAction } from '../redux/actions/userSchedulesActions';
 import fetchSchedulesAction from '../redux/actions/scheduleAction';
 
-const SelectSchedule = ({
-  schedules, current, mySchedules, activityId,
-}) => {
+const SelectSchedule = ({ current, activityId }) => {
   const dispatch = useDispatch();
+  const schedulesState = useSelector((state) => state.schedulesStateObject);
   const userScheduleState = useSelector((state) => state.userSchedulesObject);
+
+  const { schedules } = schedulesState;
+  const { created, destroyed, userSchedules } = userScheduleState;
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
     dispatch(fetchSchedulesAction(activityId));
     dispatch(fetchUserSchedulesAction(activityId, user.id));
-  }, []);
+  }, [created, destroyed]);
 
   const handleBookAClass = (e) => {
     e.preventDefault();
@@ -43,11 +45,11 @@ const SelectSchedule = ({
     dispatch(fetchUserSchedulesAction(activityId, userId));
   };
 
-  console.log('personal', mySchedules.length);
+  console.log('personal', userSchedules.length);
 
   const bookClass = (current) => {
     let button = null;
-    const myshcedulesCheck = mySchedules.find(({ date }) => date === current);
+    const myshcedulesCheck = userSchedules.find(({ date }) => date === current);
 
     if (myshcedulesCheck) {
       button = <button onClick={handleDestroySchedule} id={myshcedulesCheck.id} type="button">Cancel</button>;
@@ -87,9 +89,7 @@ const SelectSchedule = ({
 };
 
 SelectSchedule.propTypes = {
-  schedules: PropTypes.arrayOf(PropTypes.object).isRequired,
   current: PropTypes.objectOf(PropTypes.string).isRequired,
-  mySchedules: PropTypes.arrayOf(PropTypes.object).isRequired,
   activityId: PropTypes.string.isRequired,
 };
 
