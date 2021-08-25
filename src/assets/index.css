@@ -3,6 +3,7 @@
   --font-b2: #454545;
   --font-b3: #c6c6c6;
   --primary: #97bf0f;
+  --primary-hover: #80a20d;
 }
 
 * {
@@ -22,4 +23,22 @@ body {
 a {
   text-decoration: none;
   color: #484848;
+}
+
+.Button {
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: 5rem;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10.5rem;
+}
+
+.Button:hover {
+  background-color: var(--primary-hover);
 }

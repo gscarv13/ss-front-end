@@ -14,7 +14,7 @@ const Navigation = () => (
         <li>
           <NavLink
             exact
-            to="/"
+            to="/home"
             className="Navigation-Link"
             activeClassName="Active"
           >
