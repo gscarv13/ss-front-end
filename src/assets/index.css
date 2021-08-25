@@ -42,3 +42,7 @@ a {
 .Button:hover {
   background-color: var(--primary-hover);
 }
+
+main {
+  width: 100%;
+}

@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { Icon } from '@iconify/react';
 import fetchActivitiesAction from '../redux/actions/activitiesActions';
 import Loading from '../components/general/Loading';
 import ErrorToast from '../components/general/ErrorToast';
 import ActivityCard from '../components/ActivityCard';
 import image from '../assets/snowboard.png';
+import '../assets/Activities.css';
 
 const Activities = () => {
   const dispatch = useDispatch();
@@ -16,16 +18,20 @@ const Activities = () => {
   }, []);
 
   return (
-    <div>
+    <div className="Activities">
       {
         loading
           ? <Loading />
           : (
-            <div>
+            <>
               <h1>Activities</h1>
-              <p>Please select an activity for more details</p>
-              <div>
-                {
+              <h4>Please select an activity for more details</h4>
+              <div className="Activities-Slide">
+                <div className="Activities-Slide-Left-Button">
+                  <Icon icon="akar-icons:play" width="20" height="20" hFlip />
+                </div>
+                <div className="Activities-Slide-Content">
+                  {
                   activities.map((act) => (
                     <ActivityCard
                       key={act.id}
@@ -38,9 +44,13 @@ const Activities = () => {
                     />
                   ))
                 }
+                </div>
+                <div className="Activities-Slide-Right-Button">
+                  <Icon icon="akar-icons:play" width="20" height="20" />
+                </div>
               </div>
               {error && <ErrorToast error={error} />}
-            </div>
+            </>
           )
       }
     </div>

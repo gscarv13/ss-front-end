@@ -1,0 +1,48 @@
+.Activities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 3rem 0;
+}
+
+.Activities h1 {
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.Activities h4 {
+  margin-bottom: 3rem;
+}
+
+.Activities-Slide-Left-Button {
+ background-color: var(--primary);
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.Activities-Slide-Right-Button {
+  background-color: var(--primary);
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.Activities-Slide {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.Activities-Slide-Content{
+  display: flex;
+  overflow: scroll;
+  max-width: 50rem;
+}
