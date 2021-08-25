@@ -1,26 +1,57 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import logo from '../assets/logo1.png';
 import '../assets/Navigation.css';
 
 const Navigation = () => (
   <nav className="Navigation">
-    <div>
-      LOGO
+    <div className="Navigation-Logo">
+      <img src={logo} alt="Storm Mountain Logo" />
     </div>
 
-    <div>
+    <div className="Navigation-Links">
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/activities">Activities</Link></li>
-        <li><Link to="/schedules">SCHEDULES</Link></li>
-        <li><button type="button">LIFESTYLE</button></li>
+        <li>
+          <NavLink
+            exact
+            to="/"
+            className="Navigation-Link"
+            activeClassName="Active"
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="Navigation-Link"
+            activeClassName="Active"
+            to="/activities"
+          >
+            Activities
+          </NavLink>
+        </li>
       </ul>
     </div>
 
     <footer>
-      <div>
-        icons
+      <div className="Navigation-Icons">
+        <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+          <Icon icon="grommet-icons:twitter" width="20" height="20" />
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <Icon icon="brandico:facebook" width="20" height="20" />
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Google%2B" target="_blank" rel="noreferrer">
+          <Icon icon="typcn:social-google-plus" width="25" height="25" />
+        </a>
+        <a href="https://vimeo.com/" target="_blank" rel="noreferrer">
+          <Icon icon="akar-icons:vimeo-fill" width="20" height="20" />
+        </a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">
+          <Icon icon="cib:pinterest-p" width="20" height="20" />
+        </a>
       </div>
-      copyright info
+      &copy; 2021 STORM MOUNTAIN
     </footer>
   </nav>
 );

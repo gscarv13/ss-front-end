@@ -1,3 +1,10 @@
+:root {
+  --font-b1: #0f0f0f;
+  --font-b2: #454545;
+  --font-b3: #c6c6c6;
+  --primary: #97bf0f;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,4 +17,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: #484848;
 }
