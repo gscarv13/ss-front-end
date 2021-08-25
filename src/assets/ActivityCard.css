@@ -1,0 +1,44 @@
+.ActivityCard {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-width: 20rem;
+}
+
+.ActivityCard img {
+  width: 10rem;
+}
+
+.ActivityCard-Details, .ActivityCard-Description {
+  text-align: center;
+}
+
+.ActivityCard-Details h5 {
+  text-transform: uppercase;
+}
+
+.ActivityCard-Description {
+  color: var(--font-b4);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.ActivityCard-Link-Social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--font-b3);
+  border-radius: 5rem;
+  width: 2rem;
+  height: 2rem;
+  color: var(--font-b4);
+}
+
+.ActivityCard-Social {
+  margin: 0 auto;
+  width: 8rem;
+  display: flex;
+  justify-content: space-around;
+}

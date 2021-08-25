@@ -26,6 +26,7 @@ const Activities = () => {
             <>
               <h1>Activities</h1>
               <h4>Please select an activity for more details</h4>
+              <div className="DotSeparator" />
               <div className="Activities-Slide">
                 <div className="Activities-Slide-Left-Button">
                   <Icon icon="akar-icons:play" width="20" height="20" hFlip />

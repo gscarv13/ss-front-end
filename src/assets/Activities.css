@@ -6,6 +6,7 @@
   width: 100%;
   height: auto;
   padding: 3rem 0;
+  color: var(--font-b1)
 }
 
 .Activities h1 {
@@ -14,7 +15,7 @@
 }
 
 .Activities h4 {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .Activities-Slide-Left-Button {
@@ -39,10 +40,11 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 3rem;
 }
 
 .Activities-Slide-Content{
   display: flex;
   overflow: scroll;
-  max-width: 50rem;
+  max-width: 60rem;
 }
