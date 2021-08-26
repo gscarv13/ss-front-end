@@ -1,0 +1,52 @@
+.UserDashboard-Table-Container {
+  overflow-y: auto;
+  height: 30rem;
+  width: 35rem;
+}
+
+.UserDashboard-Table-Container p {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  background-color: white;
+  width: 30rem;
+  border: white 1px solid;
+  border-radius: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+}
+
+thead tr {
+  font-weight: bold;
+}
+
+thead tr td {
+  color: #fff;
+  background-color: #252525;
+}
+
+tr {
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+table thead tr td:first-child {
+  border-top-left-radius: 1rem;
+}
+
+table thead tr td:last-child {
+  border-top-right-radius: 1rem;
+}
+
+td {
+  color: var(--font-b2)
+}
+
+tr:hover {
+  background-color: var(--font-b4);
+}
