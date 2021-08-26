@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import fetchActivitiesAction from '../redux/actions/activitiesActions';
 import Loading from '../components/general/Loading';
@@ -12,10 +12,31 @@ const Activities = () => {
   const dispatch = useDispatch();
   const activitiesDispatchResults = useSelector((state) => state.activitiesStateObject);
   const { error, activities, loading } = activitiesDispatchResults;
+  const activityRef = useRef(null);
 
   useEffect(() => {
     dispatch(fetchActivitiesAction());
   }, []);
+
+  const slideLeft = () => {
+    if (activityRef.current) {
+      activityRef.current.scrollBy({
+        top: 0,
+        left: -400,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const slideRight = () => {
+    if (activityRef.current) {
+      activityRef.current.scrollBy({
+        top: 0,
+        left: 400,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   return (
     <div className="Activities">
@@ -28,25 +49,21 @@ const Activities = () => {
               <h4>Please select an activity for more details</h4>
               <div className="DotSeparator" />
               <div className="Activities-Slide">
-                <div className="Activities-Slide-Left-Button">
+                <div className="Activities-Slide-Left-Button" onClick={slideLeft} role="presentation">
                   <Icon icon="akar-icons:play" width="20" height="20" hFlip />
                 </div>
-                <div className="Activities-Slide-Content">
+                <div className="Activities-Slide-Content" ref={activityRef}>
                   {
                   activities.map((act) => (
                     <ActivityCard
                       key={act.id}
-                      id={act.id}
                       image={image}
-                      title={act.title}
-                      level={act.level}
-                      activityType={act.activity_type}
-                      description={act.description}
+                      activity={act}
                     />
                   ))
                 }
                 </div>
-                <div className="Activities-Slide-Right-Button">
+                <div className="Activities-Slide-Right-Button" onClick={slideRight} role="presentation">
                   <Icon icon="akar-icons:play" width="20" height="20" />
                 </div>
               </div>
