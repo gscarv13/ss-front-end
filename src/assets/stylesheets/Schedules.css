@@ -20,7 +20,7 @@
 }
 
 .react-calendar {
-  border: none
+  border: none;
 }
 
 .Schedules-Left-Side {
@@ -35,8 +35,8 @@
   width: 100%;
 }
 
-.Schedules-Left-Side img:before {
-  content:'.';
+.Schedules-Left-Side img::before {
+  content: '.';
   background-color: aqua;
   height: 100rem;
   width: 100rem;

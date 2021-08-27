@@ -4,6 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 import { userSignUp } from '../redux/actions/userActions';
 import Loading from './general/Loading';
 import ErrorToast from './general/ErrorToast';
+import '../assets/stylesheets/SignInSignUp.css';
 
 const SignUpForm = () => {
   const initialState = {
@@ -35,20 +36,20 @@ const SignUpForm = () => {
   };
 
   return (
-    <div>
+    <>
       {
         loading
           ? <Loading />
           : (
-            <>
-              <h1>Please fill you information bellow</h1>
+            <div className="Form-Container">
+              <h1>Sign Up</h1>
               <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="email" name="email" placeholder="Email" value={credentials.email} />
                 <input onChange={handleChange} type="text" name="first_name" placeholder="First Name" value={credentials.first_name} />
                 <input onChange={handleChange} type="text" name="last_name" placeholder="Last Name" value={credentials.last_name} />
                 <input onChange={handleChange} type="password" name="password" placeholder="Password" value={credentials.password} />
                 <input onChange={handleChange} type="password" name="password_confirmation" placeholder="Confirm Your password" value={credentials.password_confirmation} />
-                <button type="submit">Sign In</button>
+                <button type="submit" className="Button">Sign In</button>
               </form>
               <footer>
                 Already a member?
@@ -56,12 +57,12 @@ const SignUpForm = () => {
               </footer>
               {error && <ErrorToast error={error} />}
               {success && <Redirect to="/" />}
-            </>
+            </div>
           )
 
       }
 
-    </div>
+    </>
   );
 };
 

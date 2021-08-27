@@ -44,7 +44,7 @@ table thead tr td:last-child {
 }
 
 td {
-  color: var(--font-b2)
+  color: var(--font-b2);
 }
 
 tr:hover {

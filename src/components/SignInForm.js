@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { userSignIn } from '../redux/actions/userActions';
 import Loading from './general/Loading';
 import ErrorToast from './general/ErrorToast';
+import '../assets/stylesheets/SignInSignUp.css';
 
 const SignInForm = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
@@ -29,17 +30,17 @@ const SignInForm = () => {
   };
 
   return (
-    <div>
+    <>
       {
         loading
           ? <Loading />
           : (
-            <div>
-              <h1>Please sign in</h1>
+            <div className="Form-Container">
+              <h1>Sign In</h1>
               <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="email" name="email" placeholder="email" value={credentials.email} />
                 <input onChange={handleChange} type="password" name="password" placeholder="Password" value={credentials.password} />
-                <button type="submit">Sign In</button>
+                <button type="submit" className="Button">Sign In</button>
               </form>
               <footer>
                 Not a member yet?
@@ -50,7 +51,7 @@ const SignInForm = () => {
             </div>
           )
       }
-    </div>
+    </>
   );
 };
 

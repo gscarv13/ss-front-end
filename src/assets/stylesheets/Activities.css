@@ -6,7 +6,7 @@
   width: 100%;
   height: auto;
   padding: 3rem 0;
-  color: var(--font-b1)
+  color: var(--font-b1);
 }
 
 .Activities h1 {
@@ -19,7 +19,7 @@
 }
 
 .Activities-Slide-Left-Button {
- background-color: var(--primary);
+  background-color: var(--primary);
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
   padding: 1.5rem;
@@ -46,7 +46,7 @@
   overflow-y: auto;
 }
 
-.Activities-Slide-Content{
+.Activities-Slide-Content {
   display: flex;
   overflow-y: hidden;
   max-width: 60rem;

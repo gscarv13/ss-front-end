@@ -14,8 +14,17 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +42,7 @@ a {
   border: none;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,10 +55,13 @@ a {
 
 main {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .DotSeparator {
-  border-top: #eeeeee 4px dotted;
+  border-top: #eee 4px dotted;
   width: 10rem;
   margin: 1rem auto;
 }

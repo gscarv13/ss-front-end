@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import logo from '../assets/logo1.png';
-import '../assets/Navigation.css';
+import '../assets/stylesheets/Navigation.css';
+import SessionButton from './SessionButton';
 
 const Navigation = () => (
   <nav className="Navigation">
@@ -29,6 +30,9 @@ const Navigation = () => (
           >
             Activities
           </NavLink>
+        </li>
+        <li>
+          <SessionButton />
         </li>
       </ul>
     </div>

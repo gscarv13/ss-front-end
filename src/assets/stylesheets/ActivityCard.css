@@ -5,6 +5,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
   min-width: 20rem;
+  height: 23rem;
 }
 
 .ActivityCard-Image {
@@ -50,7 +51,8 @@
   background-color: #cf5045;
 }
 
-.ActivityCard-Details, .ActivityCard-Description {
+.ActivityCard-Details,
+.ActivityCard-Description {
   text-align: center;
 }
 

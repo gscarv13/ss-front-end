@@ -1,7 +1,7 @@
 import {
   BrowserRouter, Route, Switch,
 } from 'react-router-dom';
-import './assets/App.css';
+import './assets/stylesheets/App.css';
 import LandingPage from './views/LandingPage';
 import MainArea from './views/MainArea';
 

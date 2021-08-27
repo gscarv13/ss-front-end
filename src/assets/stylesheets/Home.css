@@ -1,9 +1,9 @@
 .Home {
   background-position: 0 0;
-  background-image: url("./home_bg1.jpg");
+  background-image: url("../home_bg1.jpg");
   background-size: 160%;
   background-repeat: no-repeat;
-  height: 90%;
+  height: 100%;
   width: 100%;
   position: relative;
   z-index: 10;
