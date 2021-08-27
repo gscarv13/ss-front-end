@@ -3,28 +3,28 @@ import { Link } from 'react-router-dom';
 import '../assets/ActivityCard.css';
 import { Icon } from '@iconify/react';
 
-const ActivityCard = ({
-  title, level, activityType, description, image, id,
-}) => (
+const ActivityCard = ({ activity }) => (
   <>
     <div className="ActivityCard">
-      <img src={image} alt="" />
+      <div className="ActivityCard-Image">
+        <img src={activity.image} alt="" />
+      </div>
       <div className="ActivityCard-Details">
-        <Link to={`/schedules/${id}`}>
+        <Link to={{ pathname: `/schedules/${activity.id}`, state: { activity } }}>
           <h5>
-            {title}
+            {activity.title}
             {' '}
-            <span>{activityType}</span>
+            <span>{activity.activity_type}</span>
           </h5>
         </Link>
         <div className="DotSeparator" />
         <div className="ActivityCard-Description">
           <p>
-            {level}
+            {activity.level}
             {' '}
-            º
+            •
             {' '}
-            {description}
+            {activity.description}
           </p>
         </div>
         <div className="ActivityCard-Social">
@@ -44,12 +44,7 @@ const ActivityCard = ({
 );
 
 ActivityCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  level: PropTypes.string.isRequired,
-  activityType: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  activity: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default ActivityCard;

@@ -7,8 +7,47 @@
   min-width: 20rem;
 }
 
-.ActivityCard img {
+.ActivityCard-Image {
   width: 10rem;
+  height: 10rem;
+  position: relative;
+}
+
+.ActivityCard img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.ActivityCard-Image::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fde877;
+  border-radius: 50%;
+  z-index: -100;
+}
+
+.ActivityCard:nth-child(2) .ActivityCard-Image::before {
+  background-color: #269dd1;
+}
+
+.ActivityCard:nth-child(3) .ActivityCard-Image::before {
+  background-color: #bcd002;
+}
+
+.ActivityCard:nth-child(4) .ActivityCard-Image::before {
+  background-color: #8f524e;
+}
+
+.ActivityCard:nth-child(5) .ActivityCard-Image::before {
+  background-color: #73477d;
+}
+
+.ActivityCard:nth-child(6) .ActivityCard-Image::before {
+  background-color: #cf5045;
 }
 
 .ActivityCard-Details, .ActivityCard-Description {

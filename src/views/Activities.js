@@ -5,7 +5,6 @@ import fetchActivitiesAction from '../redux/actions/activitiesActions';
 import Loading from '../components/general/Loading';
 import ErrorToast from '../components/general/ErrorToast';
 import ActivityCard from '../components/ActivityCard';
-import image from '../assets/snowboard.png';
 import '../assets/Activities.css';
 
 const Activities = () => {
@@ -57,7 +56,6 @@ const Activities = () => {
                   activities.map((act) => (
                     <ActivityCard
                       key={act.id}
-                      image={image}
                       activity={act}
                     />
                   ))

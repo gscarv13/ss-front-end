@@ -53,3 +53,11 @@ main {
   width: 10rem;
   margin: 1rem auto;
 }
+
+.Back-Button {
+  background-color: var(--primary);
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  padding: 1.5rem;
+  color: #fff;
+}
