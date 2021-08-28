@@ -5,7 +5,7 @@ import fetchActivitiesAction from '../redux/actions/activitiesActions';
 import Loading from '../components/general/Loading';
 import ErrorToast from '../components/general/ErrorToast';
 import ActivityCard from '../components/ActivityCard';
-import '../assets/Activities.css';
+import '../assets/stylesheets/Activities.css';
 
 const Activities = () => {
   const dispatch = useDispatch();

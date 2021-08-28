@@ -1,6 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
 import Navigation from '../components/Navgation';
-import SessionButton from '../components/SessionButton';
 import Home from './Home';
 import Activities from './Activities';
 import Schedules from './Schedules';
@@ -11,7 +10,6 @@ const MainArea = () => (
   <>
     <Navigation />
     <main>
-      <SessionButton />
       <Switch>
         <Route exact path="/home" component={Home} />
         <Route exact path="/activities" component={Activities} />
