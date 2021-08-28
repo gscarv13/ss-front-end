@@ -28,7 +28,7 @@ const userReducer = (state = initialState, action) => {
       return {
         loading: false,
         loggedIn: false,
-        error: action.payload,
+        signInError: action.payload,
       };
     case USER_SIGN_UP_REQUEST:
       return {
@@ -46,7 +46,7 @@ const userReducer = (state = initialState, action) => {
       return {
         loading: false,
         loggedIn: true,
-        error: action.payload,
+        signUpError: action.payload,
       };
     case USER_SIGN_OUT_REQUEST:
       return {

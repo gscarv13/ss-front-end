@@ -5,11 +5,15 @@ import { useEffect } from 'react';
 
 const ErrorToast = ({ error }) => {
   useEffect(() => {
-    toast(error, {
+    const err = JSON.stringify(error).replaceAll(/\{|\}|\[|\]|"/g, ' ');
+    toast(err, {
       className: 'error-toast',
     });
   }, [error]);
-  return <ToastContainer />;
+
+  return (
+    <ToastContainer />
+  );
 };
 
 ErrorToast.propTypes = {

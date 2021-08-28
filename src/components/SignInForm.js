@@ -9,9 +9,9 @@ import '../assets/stylesheets/SignInSignUp.css';
 const SignInForm = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const dispatch = useDispatch();
-  const userDispatchResults = useSelector((state) => state.userObject);
+  const userState = useSelector((state) => state.userObject);
 
-  const { error, loading, success } = userDispatchResults;
+  const { signInError, loading, success } = userState;
 
   const handleChange = (e) => {
     setCredentials({
@@ -46,11 +46,11 @@ const SignInForm = () => {
                 Not a member yet?
                 <Link to="/signup">Sign Up Here</Link>
               </footer>
-              {error && <ErrorToast error={error} />}
               {success && <Redirect to="/" />}
             </div>
           )
       }
+      { signInError && <ErrorToast error={signInError} /> }
     </>
   );
 };

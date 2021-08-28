@@ -17,7 +17,8 @@ const SignUpForm = () => {
   const [credentials, setCredentials] = useState(initialState);
   const dispatch = useDispatch();
   const userDispatchResults = useSelector((state) => state.userObject);
-  const { loading, error, success } = userDispatchResults;
+  const { loading, signUpError, success } = userDispatchResults;
+  console.log(signUpError);
 
   const handleChange = (e) => {
     setCredentials({
@@ -55,7 +56,7 @@ const SignUpForm = () => {
                 Already a member?
                 <Link to="/signin">Sign In</Link>
               </footer>
-              {error && <ErrorToast error={error} />}
+              {signUpError && <ErrorToast error={signUpError} />}
               {success && <Redirect to="/" />}
             </div>
           )
