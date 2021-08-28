@@ -32,7 +32,7 @@
 }
 
 .Schedules-Left-Side img {
-  width: 100%;
+  max-width: 22rem;
 }
 
 .Schedules-Left-Side img::before {
@@ -51,7 +51,16 @@
 
 .Back-Button {
   position: absolute;
-  bottom: 4rem;
+  bottom: 1rem;
   width: 7rem;
   align-self: flex-start;
+}
+
+.react-calendar__tile--active {
+  background-color: var(--primary);
+  font-weight: bold;
+}
+
+.react-calendar__tile--active:enabled:hover {
+  background-color: var(--primary-hover);
 }

@@ -19,5 +19,18 @@
 }
 
 .SelectSchedule-BookAClass {
-  border-radius: 5rem;
+  padding: 0.5rem 1rem;
+}
+
+.SelectSchedule-BookAClass p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.SelectSchedule-BookAClass p:hover {
+  background-color: var(--font-b3);
 }

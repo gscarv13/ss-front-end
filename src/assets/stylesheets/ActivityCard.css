@@ -40,11 +40,11 @@
 }
 
 .ActivityCard:nth-child(4) .ActivityCard-Image::before {
-  background-color: #8f524e;
+  background-color: #C58884;
 }
 
 .ActivityCard:nth-child(5) .ActivityCard-Image::before {
-  background-color: #73477d;
+  background-color: #337da1;
 }
 
 .ActivityCard:nth-child(6) .ActivityCard-Image::before {
