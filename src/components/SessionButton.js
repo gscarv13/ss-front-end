@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import WelcomeUser from './WelcomeUser';
+import { NavLink } from 'react-router-dom';
 import { signOut } from '../redux/actions/userActions';
+import '../assets/stylesheets/Navigation.css';
 
 const SessionButton = () => {
   const dispatch = useDispatch();
@@ -9,28 +9,35 @@ const SessionButton = () => {
   const { user, loggedIn } = userState;
 
   const handleClick = () => {
-    dispatch(signOut());
+    dispatch(signOut(user.id));
+    document.location.reload();
   };
 
   return (
-    <div>
+    <>
       {
         loggedIn
           ? (
-            <>
-              <WelcomeUser user={user} />
-              <button type="button" onClick={handleClick}>LOGOUT</button>
-            </>
+
+            <button
+              className="Navigation-Link"
+              type="button"
+              onClick={handleClick}
+            >
+              LOGOUT
+            </button>
           )
           : (
-            <div>
-              Welcome!
-              {' '}
-              <Link to="/signin">Login / Sign Up</Link>
-            </div>
+            <NavLink
+              className="Navigation-Link"
+              activeClassName="Active"
+              to="/signin"
+            >
+              Sign In
+            </NavLink>
           )
       }
-    </div>
+    </>
   );
 };
 
