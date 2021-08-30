@@ -9,8 +9,8 @@ import '../../assets/stylesheets/Activities.css';
 
 const Activities = () => {
   const dispatch = useDispatch();
-  const activitiesDispatchResults = useSelector((state) => state.activitiesStateObject);
-  const { error, activities, loading } = activitiesDispatchResults;
+  const activitiesState = useSelector((state) => state.activitiesStateObject);
+  const { error, activities, loading } = activitiesState;
   const activityRef = useRef(null);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const Activities = () => {
               <h1>Activities</h1>
               <h4>Please select an activity for more details</h4>
               <div className="DotSeparator" />
-              <div className="Activities-Slide">
+              <div className="Activities-Slide" data-testid="activities-slider">
                 <div className="Activities-Slide-Left-Button" onClick={slideLeft} role="presentation">
                   <Icon icon="akar-icons:play" width="20" height="20" hFlip />
                 </div>
@@ -55,7 +55,7 @@ const Activities = () => {
                   {
                   activities.map((act) => (
                     <ActivityCard
-                      key={act.id}
+                      key={`id-${act.id}`}
                       activity={act}
                     />
                   ))
