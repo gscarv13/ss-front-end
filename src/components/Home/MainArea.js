@@ -1,10 +1,10 @@
 import { Route, Switch } from 'react-router-dom';
-import Navigation from '../components/Navgation';
+import Navigation from '../General/Navgation';
 import Home from './Home';
-import Activities from './Activities';
-import Schedules from './Schedules';
-import Authentication from './Authentication';
-import SignUpForm from '../components/Authentication/SignUpForm';
+import Activities from '../Activities/Activities';
+import Schedules from '../Schedules/Schedules';
+import Authentication from '../Authentication/Authentication';
+import SignUpForm from '../Authentication/SignUpForm';
 
 const MainArea = () => (
   <>

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import UserDashboard from '../components/Home/UserDashboard';
-import '../assets/stylesheets/Home.css';
+import UserDashboard from './UserDashboard';
+import '../../assets/stylesheets/Home.css';
 
 const Home = () => {
   const userObject = useSelector((state) => state.userObject);

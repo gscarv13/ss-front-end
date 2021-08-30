@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../assets/stylesheets/LandingPage.css';
+import '../../assets/stylesheets/LandingPage.css';
 import { Icon } from '@iconify/react';
 
 const LandingPage = () => (

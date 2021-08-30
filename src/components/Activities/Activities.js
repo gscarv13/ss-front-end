@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
-import fetchActivitiesAction from '../redux/actions/activitiesActions';
-import Loading from '../components/General/Loading';
-import ErrorToast from '../components/General/ErrorToast';
-import ActivityCard from '../components/Activities/ActivityCard';
-import '../assets/stylesheets/Activities.css';
+import fetchActivitiesAction from '../../redux/actions/activitiesActions';
+import Loading from '../General/Loading';
+import ErrorToast from '../General/ErrorToast';
+import ActivityCard from './ActivityCard';
+import '../../assets/stylesheets/Activities.css';
 
 const Activities = () => {
   const dispatch = useDispatch();

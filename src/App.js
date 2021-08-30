@@ -2,8 +2,8 @@ import {
   BrowserRouter, Route, Switch,
 } from 'react-router-dom';
 import './assets/stylesheets/App.css';
-import LandingPage from './views/LandingPage';
-import MainArea from './views/MainArea';
+import LandingPage from './components/LandingPage/LandingPage';
+import MainArea from './components/Home/MainArea';
 
 function App() {
   return (
