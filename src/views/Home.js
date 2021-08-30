@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import UserDashboard from '../components/UserDashboard';
+import UserDashboard from '../components/Home/UserDashboard';
 import '../assets/stylesheets/Home.css';
 
 const Home = () => {

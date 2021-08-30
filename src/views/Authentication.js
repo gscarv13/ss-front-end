@@ -1,4 +1,4 @@
-import SignInForm from '../components/SignInForm';
+import SignInForm from '../components/Authentication/SignInForm';
 
 const Authentication = () => <SignInForm />;
 

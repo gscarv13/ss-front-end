@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
 import { useEffect } from 'react';
-import formatDate from '../helpers/formatDate';
-import { createUserScheduleAction, fetchUserSchedulesAction, destroyUserScheduleAction } from '../redux/actions/userSchedulesActions';
-import fetchSchedulesAction from '../redux/actions/scheduleAction';
-import '../assets/stylesheets/SelectSchedule.css';
-import Loading from './general/Loading';
+import formatDate from '../../helpers/formatDate';
+import { createUserScheduleAction, fetchUserSchedulesAction, destroyUserScheduleAction } from '../../redux/actions/userSchedulesActions';
+import fetchSchedulesAction from '../../redux/actions/scheduleAction';
+import '../../assets/stylesheets/SelectSchedule.css';
+import Loading from '../General/Loading';
 
 const SelectSchedule = ({ current, activityId }) => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import '../assets/stylesheets/UserSchedulesTable.css';
+import '../../assets/stylesheets/UserSchedulesTable.css';
 import { useDispatch } from 'react-redux';
-import { destroyUserScheduleAction } from '../redux/actions/userSchedulesActions';
+import { destroyUserScheduleAction } from '../../redux/actions/userSchedulesActions';
 
 const UserSchedulesTable = ({ schedules }) => {
   const dispatch = useDispatch();

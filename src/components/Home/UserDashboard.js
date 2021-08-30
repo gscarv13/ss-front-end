@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchUserSchedulesAction } from '../redux/actions/userSchedulesActions';
+import { fetchUserSchedulesAction } from '../../redux/actions/userSchedulesActions';
 import UserSchedulesTable from './UserSchedulesTable';
-import '../assets/stylesheets/UserDashboard.css';
+import '../../assets/stylesheets/UserDashboard.css';
 
 const UserDashboard = () => {
   const userScheduleState = useSelector((state) => state.userSchedulesObject);

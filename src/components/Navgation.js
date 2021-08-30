@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import logo from '../assets/logo1.png';
 import '../assets/stylesheets/Navigation.css';
-import SessionButton from './SessionButton';
+import SessionButton from './Authentication/SessionButton';
 
 const Navigation = () => (
   <nav className="Navigation">

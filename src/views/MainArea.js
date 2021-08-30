@@ -4,7 +4,7 @@ import Home from './Home';
 import Activities from './Activities';
 import Schedules from './Schedules';
 import Authentication from './Authentication';
-import SignUpForm from '../components/SignUpForm';
+import SignUpForm from '../components/Authentication/SignUpForm';
 
 const MainArea = () => (
   <>

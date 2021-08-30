@@ -3,7 +3,7 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Icon } from '@iconify/react';
-import SelectSchedule from '../components/SelectSchedule';
+import SelectSchedule from '../components/Schedules/SelectSchedule';
 import '../assets/stylesheets/Schedules.css';
 
 const Schedules = () => {

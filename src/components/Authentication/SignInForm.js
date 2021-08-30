@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { userSignIn } from '../redux/actions/userActions';
-import Loading from './general/Loading';
-import ErrorToast from './general/ErrorToast';
-import '../assets/stylesheets/SignInSignUp.css';
+import { userSignIn } from '../../redux/actions/userActions';
+import Loading from '../General/Loading';
+import ErrorToast from '../General/ErrorToast';
+import '../../assets/stylesheets/SignInSignUp.css';
 
 const SignInForm = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });

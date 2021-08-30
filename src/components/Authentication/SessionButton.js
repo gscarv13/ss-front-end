@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { signOut } from '../redux/actions/userActions';
-import '../assets/stylesheets/Navigation.css';
+import { signOut } from '../../redux/actions/userActions';
+import '../../assets/stylesheets/Navigation.css';
 
 const SessionButton = () => {
   const dispatch = useDispatch();

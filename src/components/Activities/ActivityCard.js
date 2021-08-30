@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../assets/stylesheets/ActivityCard.css';
+import '../../assets/stylesheets/ActivityCard.css';
 import { Icon } from '@iconify/react';
 
 const ActivityCard = ({ activity }) => (

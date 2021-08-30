@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
 import fetchActivitiesAction from '../redux/actions/activitiesActions';
-import Loading from '../components/general/Loading';
-import ErrorToast from '../components/general/ErrorToast';
-import ActivityCard from '../components/ActivityCard';
+import Loading from '../components/General/Loading';
+import ErrorToast from '../components/General/ErrorToast';
+import ActivityCard from '../components/Activities/ActivityCard';
 import '../assets/stylesheets/Activities.css';
 
 const Activities = () => {
