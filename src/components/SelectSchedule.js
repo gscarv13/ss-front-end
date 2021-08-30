@@ -66,7 +66,7 @@ const SelectSchedule = ({ current, activityId }) => {
   };
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div>
       { loadingCreate && <div><Loading /></div> }
       {
         user
@@ -91,10 +91,12 @@ const SelectSchedule = ({ current, activityId }) => {
             </div>
           )
           : (
-            <>
-              <p>To book a class please sign in</p>
+
+            <p className="SignIn">
+              To book a class please sign in
               <Link to="/signin" className="Button">Sign In</Link>
-            </>
+            </p>
+
           )
       }
       { (destroyed || created) && <Redirect to="/home" /> }

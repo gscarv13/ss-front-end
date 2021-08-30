@@ -15,7 +15,7 @@
 
 .Schedules-Right-Side p {
   width: 20rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--font-b2);
 }
 
@@ -63,4 +63,8 @@
 
 .react-calendar__tile--active:enabled:hover {
   background-color: var(--primary-hover);
+}
+
+abbr {
+  text-decoration: none;
 }

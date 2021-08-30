@@ -58,6 +58,7 @@ const userReducer = (state = initialState, action) => {
         user: {},
         loading: false,
         logged_in: false,
+        signOut: true,
       };
     case USER_SIGN_OUT_FAIL:
       return {

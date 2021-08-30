@@ -34,3 +34,16 @@
 .SelectSchedule-BookAClass p:hover {
   background-color: var(--font-b3);
 }
+
+.SignIn {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.SignIn a {
+  margin-top: 1rem;
+}
