@@ -46,7 +46,7 @@ const SignInForm = () => {
                 Not a member yet?
                 <Link to="/signup">Sign Up Here</Link>
               </footer>
-              {success && <Redirect to="/" />}
+              {success && <Redirect to="/home" />}
             </div>
           )
       }

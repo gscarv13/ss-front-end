@@ -57,7 +57,7 @@ const SignUpForm = () => {
                 <Link to="/signin">Sign In</Link>
               </footer>
               {signUpError && <ErrorToast error={signUpError} />}
-              {success && <Redirect to="/" />}
+              {success && <Redirect to="/home" />}
             </div>
           )
 

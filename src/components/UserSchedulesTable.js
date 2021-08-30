@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../assets/UserSchedulesTable.css';
+import '../assets/stylesheets/UserSchedulesTable.css';
 import { useDispatch } from 'react-redux';
 import { destroyUserScheduleAction } from '../redux/actions/userSchedulesActions';
 

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchUserSchedulesAction } from '../redux/actions/userSchedulesActions';
 import UserSchedulesTable from './UserSchedulesTable';
-import '../assets/UserDashboard.css';
+import '../assets/stylesheets/UserDashboard.css';
 
 const UserDashboard = () => {
   const userScheduleState = useSelector((state) => state.userSchedulesObject);
@@ -18,8 +18,8 @@ const UserDashboard = () => {
   return (
     <div>
       {
-        userSchedules.length > 0
-          ? <UserSchedulesTable schedules={userScheduleState.userSchedules} />
+        userSchedules && userSchedules.length > 0
+          ? <UserSchedulesTable schedules={userSchedules} />
           : (
             <div className="No-Schedules">
               <p>No Lesson Scheduled yet! Check out our activities by clicking</p>

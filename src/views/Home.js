@@ -1,21 +1,20 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import UserDashboard from '../components/UserDashboard';
 import '../assets/stylesheets/Home.css';
 
 const Home = () => {
-  const user = JSON.parse(localStorage.getItem('user'))
-    ? JSON.parse(localStorage.getItem('user')).first_name
-    : null;
-
+  const userObject = useSelector((state) => state.userObject);
+  const { user, loggedIn } = userObject;
   return (
     <div className="Home">
       {
-        user
+        loggedIn
           ? (
             <>
               <h1>
                 Welcome!
-                { user && user }
+                { user && user.first_name }
               </h1>
               <UserDashboard />
             </>
