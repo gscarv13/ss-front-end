@@ -18,7 +18,6 @@ const SignUpForm = () => {
   const dispatch = useDispatch();
   const userDispatchResults = useSelector((state) => state.userObject);
   const { loading, signUpError, success } = userDispatchResults;
-  console.log(signUpError);
 
   const handleChange = (e) => {
     setCredentials({
@@ -44,7 +43,7 @@ const SignUpForm = () => {
           : (
             <div className="Form-Container">
               <h1>Sign Up</h1>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} data-testid="sign-up-form">
                 <input onChange={handleChange} type="email" name="email" placeholder="Email" value={credentials.email} />
                 <input onChange={handleChange} type="text" name="first_name" placeholder="First Name" value={credentials.first_name} />
                 <input onChange={handleChange} type="text" name="last_name" placeholder="Last Name" value={credentials.last_name} />

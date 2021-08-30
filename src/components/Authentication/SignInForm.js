@@ -35,7 +35,7 @@ const SignInForm = () => {
         loading
           ? <Loading />
           : (
-            <div className="Form-Container">
+            <div className="Form-Container" data-testid="sign-in-form">
               <h1>Sign In</h1>
               <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="email" name="email" placeholder="email" value={credentials.email} />
