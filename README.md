@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Storm Mountain
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is a website focused on winter sports. The goal is to allow users create accounts,
+> pick one sport and book classes.
+> Built with React and Redux and the Storm Mountain API
 
-## Available Scripts
+![image](./demo/demo1.png)
 
-In the project directory, you can run:
+## Built With
 
-### `yarn start`
+- React
+- Redux
+- HTML
+- CSS
+- ESLint
+- Stylelint
+- Webpack
+- Node
+- Yarn
+- Jest
+- Iconify
+- Axios
+- react-spinners
+- react-calendar
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Live version
 
-### `yarn test`
+You can check the live version in [this link](https://storm-mountain.netlify.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `yarn build`
+To run this project locally, make sure you have the following installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js, more information [here](https://nodejs.org/en/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Setup and Install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone the repository `git clone https://github.com/gscarv13/ss-front-end.git`
+- Move to the cloned repository `cd ss-front-end`
+- Run `yarn install` to set up all dependencies
+- Run `yarn start` to initiate development server
 
-### `yarn eject`
+### Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Open your browser
+- Enter `localhost:3000`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run the tests, open the terminal and enter the following command,
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```terminal
+yarn test
+```
 
-## Learn More
+Then follow the instructions provided
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Gustavo Carvalho**
 
-### Code Splitting
+- GitHub: [@gscarv13](https://github.com/gscarv13)
+- Twitter: [@Gscarv13](https://twitter.com/Gscarv13)
+- LinkedIn: [Gustavo Carvalho](www.linkedin.com/in/gscarv13)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contributing
 
-### Analyzing the Bundle Size
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to check the [issues page](https://github.com/gscarv13/react-catalogue/issues).
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](LICENSE) licensed.
