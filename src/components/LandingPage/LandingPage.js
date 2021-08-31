@@ -9,7 +9,7 @@ const LandingPage = () => (
     <Link to="/home">
       <button className="Button" type="button">
         Check it out
-        <Icon icon="akar-icons:circle-chevron-left" width="30" height="30" hFlip />
+        <Icon style={{ marginLeft: '0.8rem' }} icon="akar-icons:circle-chevron-left" width="30" height="30" hFlip />
       </button>
     </Link>
   </div>
