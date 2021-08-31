@@ -11,17 +11,17 @@ import { Provider } from 'react-redux';
 
 const initialState = {
   userObject: { user: {}, loggedIn: false },
-  schedulesStateObject: { schedules: [{}] },
-  userSchedulesObject: { userSchedules: [{ date: null }] },
+  schedulesStateObject: { schedules: [] },
+  userSchedulesObject: { userSchedules: [] },
   activitiesStateObject: { loading: false, activities: [] },
 };
 
 const mockStore = configureStore([thunk]);
 export const store = mockStore(initialState);
 
-export const renderHelper = (component) => render(
+export const renderHelper = (component, mockStore = store) => render(
   <BrowserRouter>
-    <Provider store={store}>
+    <Provider store={mockStore}>
       {component}
     </Provider>
   </BrowserRouter>,

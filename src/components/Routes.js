@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
-import Navigation from './General/Navgation';
+import Navigation from './General/Navigation';
 import Home from './Home/Home';
 import Activities from './Activities/Activities';
 import Schedules from './Schedules/Schedules';

@@ -25,11 +25,11 @@ const UserSchedulesTable = ({ schedules }) => {
         <tbody>
           {
           schedules.map((item) => (
-            <tr key={item.id}>
+            <tr key={`item-${item.id}`}>
               <td>{item.activity}</td>
               <td>{item.date}</td>
               <td>
-                <button onClick={handleDestroy} id={item.id} className="Cancel" type="button">Cancel</button>
+                <button onClick={handleDestroy} id={`button-${item.id}`} className="Cancel" type="button">Cancel</button>
               </td>
             </tr>
           ))

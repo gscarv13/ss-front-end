@@ -17,7 +17,7 @@ export const userSignIn = (loginDetails) => async (dispatch) => {
     localStorage.setItem('user', JSON.stringify(res.data.user));
     localStorage.setItem('loggedIn', JSON.stringify(true));
   } catch (err) {
-    dispatch({ type: USER_SIGN_IN_FAIL, payload: err.response.data.error });
+    dispatch({ type: USER_SIGN_IN_FAIL, payload: err.response.data });
   }
 };
 

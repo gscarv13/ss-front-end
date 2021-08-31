@@ -4,8 +4,12 @@ import {
   USER_SIGN_OUT_REQUEST, USER_SIGN_OUT_SUCCESS, USER_SIGN_OUT_FAIL,
 } from '../../constants/types';
 
+const currentUser = localStorage.getItem('user')
+  ? JSON.parse(localStorage.getItem('user'))
+  : {};
+
 const initialState = {
-  user: {},
+  user: currentUser,
   logged_in: false,
   error: {},
 };
