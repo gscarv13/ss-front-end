@@ -38,7 +38,7 @@ const Navigation = () => (
     </div>
 
     <footer>
-      <div className="Navigation-Icons">
+      <div className="Navigation-Icons" data-testid="icons-container">
         <a href="https://twitter.com/" target="_blank" rel="noreferrer">
           <Icon icon="grommet-icons:twitter" width="20" height="20" />
         </a>

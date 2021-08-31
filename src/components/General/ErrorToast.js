@@ -17,7 +17,7 @@ const ErrorToast = ({ error }) => {
 };
 
 ErrorToast.propTypes = {
-  error: PropType.string.isRequired,
+  error: PropType.objectOf(PropType.string).isRequired,
 };
 
 export default ErrorToast;
