@@ -21,7 +21,7 @@ const Home = () => {
           )
           : (
             <>
-              <h1>Wellcome!</h1>
+              <h1>Welcome!</h1>
               <p>
                 Storm Mountain is a winter sports resort.
                 To book a lesson please sign up and sign up

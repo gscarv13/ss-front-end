@@ -33,10 +33,12 @@ const Schedules = () => {
       </div>
       <div className="Schedules-Right-Side">
         <h3>Book a Class</h3>
-        <Calendar
-          onChange={setPickDate}
-          value={currentDate}
-        />
+        <div data-testid="calendar">
+          <Calendar
+            onChange={setPickDate}
+            value={currentDate}
+          />
+        </div>
         <div className="DotSeparator" />
         {
         pickDate && (

@@ -9,10 +9,11 @@ const UserDashboard = () => {
   const userScheduleState = useSelector((state) => state.userSchedulesObject);
   const dispatch = useDispatch();
   const { userSchedules, destroyed } = userScheduleState;
-
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'));
-    dispatch(fetchUserSchedulesAction(null, user.id));
+    if (user) {
+      dispatch(fetchUserSchedulesAction(null, user.id));
+    }
   }, [destroyed]);
 
   return (
