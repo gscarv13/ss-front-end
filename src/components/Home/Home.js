@@ -14,7 +14,7 @@ const Home = () => {
             <>
               <h1>
                 Welcome!
-                { user && user.first_name }
+                { user && ` ${user.first_name}` }
               </h1>
               <UserDashboard />
             </>

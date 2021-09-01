@@ -29,7 +29,7 @@ const UserSchedulesTable = ({ schedules }) => {
               <td>{item.activity}</td>
               <td>{item.date}</td>
               <td>
-                <button onClick={handleDestroy} id={`button-${item.id}`} className="Cancel" type="button">Cancel</button>
+                <button onClick={handleDestroy} id={item.id} className="Cancel" type="button">Cancel</button>
               </td>
             </tr>
           ))
