@@ -13,7 +13,7 @@ export const userSignIn = (loginDetails) => async (dispatch) => {
   try {
     dispatch({ type: USER_SIGN_IN_REQUEST });
     const res = await axios.post(url, loginDetails, axiosConfig);
-    dispatch({ type: USER_SIGN_IN_SUCCESS, payload: res.data });
+    dispatch({ type: USER_SIGN_IN_SUCCESS, payload: res.data.user });
     localStorage.setItem('user', JSON.stringify(res.data.user));
     localStorage.setItem('loggedIn', JSON.stringify(true));
   } catch (err) {
@@ -26,7 +26,7 @@ export const userSignUp = (registrationDetails) => async (dispatch) => {
   try {
     dispatch({ type: USER_SIGN_UP_REQUEST });
     const res = await axios.post(url, registrationDetails, axiosConfig);
-    dispatch({ type: USER_SIGN_UP_SUCCESS, payload: res.data });
+    dispatch({ type: USER_SIGN_UP_SUCCESS, payload: res.data.user });
     localStorage.setItem('user', JSON.stringify(res.data.user));
     localStorage.setItem('loggedIn', JSON.stringify(true));
   } catch (err) {
