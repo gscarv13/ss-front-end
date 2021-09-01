@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { signOut } from '../../redux/actions/userActions';
 import '../../assets/stylesheets/Navigation.css';
 
@@ -10,7 +10,7 @@ const SessionButton = () => {
 
   const handleClick = () => {
     dispatch(signOut(user.id));
-    document.location.reload();
+      <Redirect to="/logout" />;
   };
 
   return (

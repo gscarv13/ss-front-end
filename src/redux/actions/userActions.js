@@ -27,7 +27,7 @@ export const userSignUp = (registrationDetails) => async (dispatch) => {
     dispatch({ type: USER_SIGN_UP_REQUEST });
     const res = await axios.post(url, registrationDetails, axiosConfig);
     dispatch({ type: USER_SIGN_UP_SUCCESS, payload: res.data });
-    localStorage.setItem('user', JSON.stringify(res.data));
+    localStorage.setItem('user', JSON.stringify(res.data.user));
     localStorage.setItem('loggedIn', JSON.stringify(true));
   } catch (err) {
     dispatch({ type: USER_SIGN_UP_FAIL, payload: err.response.data.error });
