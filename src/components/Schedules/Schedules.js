@@ -3,7 +3,9 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
 import SelectSchedule from './SelectSchedule';
+import { containerVariants } from '../../constants/animationVariants';
 import '../../assets/stylesheets/Schedules.css';
 
 const Schedules = () => {
@@ -14,7 +16,12 @@ const Schedules = () => {
   const currentDate = new Date();
 
   return (
-    <div className="Schedules">
+    <motion.div
+      className="Schedules"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="Schedules-Left-Side">
         <div className="Schedules-Activity-Info">
           <h1>{`${activity.title} ${activity.activity_type}`}</h1>
@@ -49,7 +56,7 @@ const Schedules = () => {
         )
       }
       </div>
-    </div>
+    </motion.div>
   );
 };
 

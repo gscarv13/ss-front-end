@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { userSignIn } from '../../redux/actions/userActions';
 import Loading from '../General/Loading';
 import ErrorToast from '../General/ErrorToast';
 import '../../assets/stylesheets/SignInSignUp.css';
+import { containerVariants } from '../../constants/animationVariants';
 
 const SignInForm = () => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
@@ -35,7 +37,13 @@ const SignInForm = () => {
         loading
           ? <Loading />
           : (
-            <div className="Form-Container" data-testid="sign-in-form">
+            <motion.div
+              className="Form-Container"
+              data-testid="sign-in-form"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
               <h1>Sign In</h1>
               <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="email" name="email" placeholder="email" value={credentials.email} />
@@ -47,7 +55,7 @@ const SignInForm = () => {
                 <Link to="/signup">Sign Up Here</Link>
               </footer>
               {success && <Redirect to="/home" />}
-            </div>
+            </motion.div>
           )
       }
       { signInError && <ErrorToast error={signInError} /> }

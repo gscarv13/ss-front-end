@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useRef } from 'react';
 import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
+import { containerVariants, activitiesSliderVariants } from '../../constants/animationVariants';
 import fetchActivitiesAction from '../../redux/actions/activitiesActions';
 import Loading from '../General/Loading';
 import ErrorToast from '../General/ErrorToast';
@@ -38,16 +40,29 @@ const Activities = () => {
   };
 
   return (
-    <div className="Activities">
+    <motion.div
+      className="Activities"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {
         loading
-          ? <Loading />
+          ? (
+            <Loading
+              variants={containerVariants}
+            />
+          )
           : (
             <>
               <h1>Activities</h1>
               <h4>Please select an activity for more details</h4>
               <div className="DotSeparator" />
-              <div className="Activities-Slide" data-testid="activities-slider">
+              <motion.div
+                className="Activities-Slide"
+                data-testid="activities-slider"
+                variants={activitiesSliderVariants}
+              >
                 <div className="Activities-Slide-Left-Button" onClick={slideLeft} role="presentation">
                   <Icon icon="akar-icons:play" width="20" height="20" hFlip />
                 </div>
@@ -64,12 +79,12 @@ const Activities = () => {
                 <div className="Activities-Slide-Right-Button" onClick={slideRight} role="presentation">
                   <Icon icon="akar-icons:play" width="20" height="20" />
                 </div>
-              </div>
+              </motion.div>
               {error && <ErrorToast error={error} />}
             </>
           )
       }
-    </div>
+    </motion.div>
   );
 };
 
