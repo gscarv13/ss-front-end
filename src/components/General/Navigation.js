@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { Icon } from '@iconify/react';
-import logo from '../../assets/logo1.png';
+import logo from '../../assets/images/logo1.png';
 import '../../assets/stylesheets/Navigation.css';
 import SessionButton from '../Authentication/SessionButton';
 
@@ -55,7 +55,7 @@ const Navigation = () => (
           <Icon icon="cib:pinterest-p" width="20" height="20" />
         </a>
       </div>
-      &copy; 2021 STORM MOUNTAIN
+      &copy; 2021
     </footer>
   </nav>
 );

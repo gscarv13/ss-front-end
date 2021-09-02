@@ -2,7 +2,7 @@
 
 > This is a website focused on winter sports. The goal is to allow users create accounts,
 > pick one sport and book classes.
-> Built with React and Redux and the Storm Mountain API
+> Built with React and Redux and the [Storm Mountain API](https://github.com/gscarv13/ss-back-end/tree/develop)
 
 ![image](./demo/demo1.png)
 
@@ -19,6 +19,7 @@
 - Yarn
 - Jest
 - Iconify
+- Toastify
 - Axios
 - react-spinners
 - react-calendar
@@ -64,11 +65,17 @@ Then follow the instructions provided
 - Twitter: [@Gscarv13](https://twitter.com/Gscarv13)
 - LinkedIn: [Gustavo Carvalho](www.linkedin.com/in/gscarv13)
 
+## Acknowledgements
+
+
+Thank You [Karsten Winegeart](https://unsplash.com/photos/pCS5YlrskC8) and [Ostap Senyuk](https://unsplash.com/photos/SW4BTHmSGQg)
+for your amazing photos on unsplash, and [Murat Korkmaz](https://www.behance.net/muratk) on Behance for his amazing UI design
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/gscarv13/react-catalogue/issues).
+Feel free to check the [issues page](https://github.com/gscarv13/ss-front-end/issues).
 
 ## Show your support
 

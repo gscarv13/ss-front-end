@@ -21,6 +21,15 @@ table {
   text-align: center;
 }
 
+tr {
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+td {
+  color: var(--font-b2);
+}
+
 thead tr {
   font-weight: bold;
 }
@@ -30,21 +39,12 @@ thead tr td {
   background-color: #252525;
 }
 
-tr {
-  height: 2.5rem;
-  font-size: 1rem;
-}
-
 table thead tr td:first-child {
   border-top-left-radius: 1rem;
 }
 
 table thead tr td:last-child {
   border-top-right-radius: 1rem;
-}
-
-td {
-  color: var(--font-b2);
 }
 
 tr:hover {

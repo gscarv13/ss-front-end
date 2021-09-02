@@ -40,7 +40,7 @@
 }
 
 .ActivityCard:nth-child(4) .ActivityCard-Image::before {
-  background-color: #C58884;
+  background-color: #c58884;
 }
 
 .ActivityCard:nth-child(5) .ActivityCard-Image::before {
