@@ -1,0 +1,5 @@
+# Netlify redirect configuration
+/logout     /
+
+# Rewrite to avoid 404 on page refresh
+/*    /index.html   200

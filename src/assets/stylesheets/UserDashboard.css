@@ -1,0 +1,29 @@
+.No-Schedules {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button {
+  background-color: #fff;
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
+}
+
+.Button:hover {
+  color: #fff;
+}
+
+.Cancel {
+  border: none;
+  border-radius: 5rem;
+  padding: 0.5rem 0.8rem;
+  background-color: #252525;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}

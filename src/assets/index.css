@@ -1,0 +1,82 @@
+:root {
+  --font-b1: #0f0f0f;
+  --font-b2: #454545;
+  --font-b3: #c6c6c6;
+  --font-b4: #c1c1c1;
+  --primary: #97bf0f;
+  --primary-hover: #80a20d;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: #484848;
+}
+
+.Button {
+  background-color: var(--primary);
+  padding: 1rem;
+  border-radius: 5rem;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10.5rem;
+}
+
+.Button:hover {
+  background-color: var(--primary-hover);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DotSeparator {
+  border-top: #eee 4px dotted;
+  width: 10rem;
+  margin: 1rem auto;
+}
+
+.Back-Button {
+  background-color: var(--primary);
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.Toastify__toast-body {
+  inline-size: 10rem;
+  overflow-wrap: break-word;
+  min-height: 5rem;
+  color: var(--font-b2);
+}

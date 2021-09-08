@@ -1,0 +1,49 @@
+.Schedule-Button {
+  border: none;
+  border-radius: 5rem;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--primary);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.Unavailable {
+  background-color: #252525;
+}
+
+.Cancel {
+  background-color: #bb2f2e;
+}
+
+.SelectSchedule-BookAClass {
+  padding: 0.5rem 1rem;
+}
+
+.SelectSchedule-BookAClass p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.SelectSchedule-BookAClass p:hover {
+  background-color: var(--font-b3);
+}
+
+.SignIn {
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.SignIn a {
+  margin-top: 1rem;
+}

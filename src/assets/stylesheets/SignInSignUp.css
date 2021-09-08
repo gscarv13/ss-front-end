@@ -1,0 +1,29 @@
+.Form-Container {
+  text-align: center;
+  height: 30rem;
+  width: 27rem;
+}
+
+.Form-Container input {
+  font-size: 1rem;
+  border: none;
+  border-bottom: solid 1px var(--font-b3);
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+  padding: 1rem;
+}
+
+.Form-Container button {
+  margin: 1rem auto 0 auto;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+footer {
+  font-size: 0.8rem;
+}
+
+footer a {
+  font-weight: bold;
+}

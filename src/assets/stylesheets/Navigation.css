@@ -1,0 +1,87 @@
+.Navigation {
+  height: inherit;
+  background: #fff;
+  min-width: 15rem;
+  position: sticky;
+  color: var(--font-b2);
+  border-right: solid 2px var(--font-b3);
+}
+
+.Navigation-Links {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 60%;
+  font-size: 1.2rem;
+}
+
+.Navigation-Links ul {
+  margin-top: 2rem;
+  text-decoration: none;
+}
+
+.Navigation-Link {
+  display: inline-block;
+  padding: 1.2rem 1rem;
+  width: 100%;
+}
+
+.Navigation-Link:hover {
+  background: var(--font-b3);
+  color: #fff;
+}
+
+.Navigation-Links ul li {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 13rem;
+}
+
+.Active {
+  color: #fff;
+  background-color: var(--primary);
+}
+
+.Navigation-Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  object-fit: contain;
+  width: 13rem;
+}
+
+.Navigation-Logo img {
+  width: 100%;
+  margin-left: 1.5rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 15%;
+  font-size: 0.7rem;
+}
+
+footer a:hover {
+  color: var(--font-b3);
+}
+
+.Navigation-Icons {
+  width: 8.8rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+li button {
+  background-color: #fff;
+  border: none;
+  font-weight: bold;
+  color: var(--font-b2);
+  font-size: 1.2rem;
+  text-align: left;
+}

@@ -1,0 +1,70 @@
+.Schedules {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  color: var(--font-b1);
+}
+
+.Schedules-Right-Side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding-right: 4rem;
+}
+
+.Schedules-Right-Side p {
+  width: 20rem;
+  font-size: 1rem;
+  color: var(--font-b2);
+}
+
+.react-calendar {
+  border: none;
+}
+
+.Schedules-Left-Side {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.Schedules-Left-Side img {
+  max-width: 22rem;
+}
+
+.Schedules-Left-Side img::before {
+  content: '.';
+  background-color: aqua;
+  height: 100rem;
+  width: 100rem;
+}
+
+.Schedules-Activity-Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 4rem;
+}
+
+.Back-Button {
+  position: absolute;
+  bottom: 1rem;
+  width: 7rem;
+  align-self: flex-start;
+}
+
+.react-calendar__tile--active {
+  background-color: var(--primary);
+  font-weight: bold;
+}
+
+.react-calendar__tile--active:enabled:hover {
+  background-color: var(--primary-hover);
+}
+
+abbr {
+  text-decoration: none;
+}
