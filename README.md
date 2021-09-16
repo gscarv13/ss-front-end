@@ -63,7 +63,7 @@ Then follow the instructions provided
 
 - GitHub: [@gscarv13](https://github.com/gscarv13)
 - Twitter: [@Gscarv13](https://twitter.com/Gscarv13)
-- LinkedIn: [Gustavo Carvalho](www.linkedin.com/in/gscarv13)
+- LinkedIn: [Gustavo Carvalho](https://www.linkedin.com/in/gscarv13)
 
 ## Acknowledgements
 
