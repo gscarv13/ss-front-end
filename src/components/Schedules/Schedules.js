@@ -27,7 +27,7 @@ const Schedules = () => {
           <h1>{`${activity.title} ${activity.activity_type}`}</h1>
           <img src={activity.image} alt="" />
           <div>
-            <h4>Description</h4>
+            <h4>Descrição</h4>
             {activity.description}
           </div>
         </div>
@@ -39,7 +39,7 @@ const Schedules = () => {
 
       </div>
       <div className="Schedules-Right-Side">
-        <h3>Book a Class</h3>
+        <h3>Agende uma aula</h3>
         <div data-testid="calendar">
           <Calendar
             onChange={setPickDate}

@@ -20,7 +20,7 @@ const Home = () => {
           ? (
             <>
               <h1>
-                Welcome!
+                Bem Vindo!
                 { user && ` ${user.first_name}` }
               </h1>
               <UserDashboard />
@@ -28,11 +28,11 @@ const Home = () => {
           )
           : (
             <>
-              <h1>Welcome!</h1>
+              <h1>Bem Vindo!</h1>
               <p>
-                Storm Mountain is a winter sports resort.
-                To book a lesson please sign up and sign up
-                and visit the activities page.
+                A Storm Mountain é um risort de esportes de inverno.
+                Para agendar uma aula entre ou crie uma conta
+                e visite a página de atividades.
               </p>
               <Link to="/signin">
                 <motion.p
@@ -41,7 +41,7 @@ const Home = () => {
                   whileHover="hover"
                   whileTap="tap"
                 >
-                  Sign In
+                  Entrar
                 </motion.p>
               </Link>
             </>

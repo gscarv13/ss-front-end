@@ -39,6 +39,8 @@ const Activities = () => {
     }
   };
 
+  console.log(activities);
+
   return (
     <motion.div
       className="Activities"
@@ -55,8 +57,8 @@ const Activities = () => {
           )
           : (
             <>
-              <h1>Activities</h1>
-              <h4>Please select an activity for more details</h4>
+              <h1>Atividades</h1>
+              <h4>Escolha uma categoria para mais detalhes</h4>
               <div className="DotSeparator" />
               <motion.div
                 className="Activities-Slide"

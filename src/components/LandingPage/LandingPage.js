@@ -11,11 +11,11 @@ const LandingPage = () => (
     initial="hidden"
     animate="visible"
   >
-    <h1>WELCOME TO STORM MOUNTAIN</h1>
-    <h3>Winter sports resort</h3>
+    <h1>BEM-VINDO Á STORM MOUNTAIN</h1>
+    <h3>Resort de Esportes de Inverno</h3>
     <Link to="/home">
       <button className="Button" type="button">
-        Check it out
+        Entra aí
         <Icon style={{ marginLeft: '0.8rem' }} icon="akar-icons:circle-chevron-left" width="30" height="30" hFlip />
       </button>
     </Link>

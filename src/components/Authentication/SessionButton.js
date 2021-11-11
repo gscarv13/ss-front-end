@@ -24,7 +24,7 @@ const SessionButton = () => {
               type="button"
               onClick={handleClick}
             >
-              LOGOUT
+              SAIR
             </button>
           )
           : (
@@ -33,7 +33,7 @@ const SessionButton = () => {
               activeClassName="Active"
               to="/signin"
             >
-              Sign In
+              ENTRAR
             </NavLink>
           )
       }

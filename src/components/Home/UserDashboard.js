@@ -23,8 +23,8 @@ const UserDashboard = () => {
           ? <UserSchedulesTable schedules={userSchedules} />
           : (
             <div className="No-Schedules">
-              <p>No Lesson Scheduled yet! Check out our activities by clicking</p>
-              <Link to="/activities" className="Button">Book Now</Link>
+              <p>Nenhuma aula agendada ainda! De uma olhada nas aulas disponíveis</p>
+              <Link to="/activities" className="Button">Agendar</Link>
             </div>
           )
       }

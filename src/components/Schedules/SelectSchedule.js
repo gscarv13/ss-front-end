@@ -56,11 +56,11 @@ const SelectSchedule = ({ current, activityId }) => {
     const myshcedulesCheck = userSchedules && userSchedules.find(({ date }) => date === current);
 
     if (myshcedulesCheck) {
-      button = <button className="Schedule-Button Cancel" onClick={handleDestroySchedule} id={myshcedulesCheck.id} type="button">Cancel</button>;
+      button = <button className="Schedule-Button Cancel" onClick={handleDestroySchedule} id={myshcedulesCheck.id} type="button">Cancelar</button>;
     } else if (schedules.find(({ date }) => date === current)) {
-      button = <button className="Schedule-Button Unavailable" type="button">Unavailable</button>;
+      button = <button className="Schedule-Button Unavailable" type="button">Indisponível</button>;
     } else {
-      button = <button className="Schedule-Button" onClick={handleCreateSchedule} data-date={current} type="button">Book a Class</button>;
+      button = <button className="Schedule-Button" onClick={handleCreateSchedule} data-date={current} type="button">Agendar</button>;
     }
     return button;
   };
@@ -93,8 +93,8 @@ const SelectSchedule = ({ current, activityId }) => {
           : (
 
             <p className="SignIn">
-              To book a class please sign in
-              <Link to="/signin" className="Button">Sign In</Link>
+              Para agendar uma aula entre com sua conta
+              <Link to="/signin" className="Button">Entrar</Link>
             </p>
 
           )

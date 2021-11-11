@@ -13,12 +13,12 @@ const UserSchedulesTable = ({ schedules }) => {
 
   return (
     <div className="UserDashboard-Table-Container">
-      <p>Booked classes</p>
+      <p>Aulas Agendadas</p>
       <table>
         <thead>
           <tr>
-            <td>Activity</td>
-            <td>Date</td>
+            <td>Atividade</td>
+            <td>Data</td>
             <td />
           </tr>
         </thead>
@@ -29,7 +29,7 @@ const UserSchedulesTable = ({ schedules }) => {
               <td>{item.activity}</td>
               <td>{item.date}</td>
               <td>
-                <button onClick={handleDestroy} id={item.id} className="Cancel" type="button">Cancel</button>
+                <button onClick={handleDestroy} id={item.id} className="Cancel" type="button">Cancelar</button>
               </td>
             </tr>
           ))

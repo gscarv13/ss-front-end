@@ -44,15 +44,15 @@ const SignInForm = () => {
               initial="hidden"
               animate="visible"
             >
-              <h1>Sign In</h1>
+              <h1>Entrar</h1>
               <form onSubmit={handleSubmit}>
-                <input onChange={handleChange} type="email" name="email" placeholder="email" value={credentials.email} />
-                <input onChange={handleChange} type="password" name="password" placeholder="Password" value={credentials.password} />
-                <button type="submit" className="Button">Sign In</button>
+                <input onChange={handleChange} type="email" name="email" placeholder="Email" value={credentials.email} />
+                <input onChange={handleChange} type="password" name="password" placeholder="Senha" value={credentials.password} />
+                <button type="submit" className="Button">Entrar</button>
               </form>
               <footer>
-                Not a member yet?
-                <Link to="/signup">Sign Up Here</Link>
+                Ainda não tem uma conta?
+                <Link to="/signup">Crie uma aqui</Link>
               </footer>
               {success && <Redirect to="/home" />}
             </motion.div>

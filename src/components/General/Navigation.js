@@ -28,7 +28,7 @@ const Navigation = () => (
             activeClassName="Active"
             to="/activities"
           >
-            Activities
+            Atividades
           </NavLink>
         </li>
         <li>
