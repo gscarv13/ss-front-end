@@ -1,12 +1,12 @@
-# Storm Mountain
+# Storm Mountain - PT-BR
 
-> This is a website focused on winter sports. The goal is to allow users create accounts,
-> pick one sport and book classes.
-> Built with React and Redux and the [Storm Mountain API](https://github.com/gscarv13/ss-back-end/tree/develop)
+> Este projeto é um site chamado Sotrm Mountain e o objetivo é permitir que os usuário
+> possa criar uma conta, se autenticar e agendar aulas em uma das categorias disponíveis
+> Feito com React, Redux e [Storm Mountain API](https://github.com/gscarv13/ss-back-end/tree/develop)
 
 ![image](./demo/demo1.png)
 
-## Built With
+## Construído com:
 
 - React
 - Redux
@@ -27,59 +27,62 @@
 
 ## Live version
 
-You can check the live version in [this link](https://storm-mountain.netlify.app/)
+Este projeto esta disponível no Netlify e pode ser acessado [através desse link](https://storm-mountain.netlify.app/)
 
-## Getting Started
+## Para começar
 
-To run this project locally, make sure you have the following installed:
+Para rodar esse projeto local, instale as seguintes dependencias:
 
-- Node.js, more information [here](https://nodejs.org/en/)
+- Node.js, maiores informações [aqui](https://nodejs.org/en/)
 
-### Setup and Install
+### Setup e intalação
 
-- Clone the repository `git clone https://github.com/gscarv13/ss-front-end.git`
-- Move to the cloned repository `cd ss-front-end`
-- Run `yarn install` to set up all dependencies
-- Run `yarn start` to initiate development server
+- Clone esse repositório `git clone https://github.com/gscarv13/ss-front-end.git`
+- Entre no repositório clonado `cd ss-front-end`
+- Entre `yarn install` para isntalar todas as dependências
+- Entre `yarn start` Para inicializar o servidor de desenvolvimento
 
-### Usage
+### Uso
 
-- Open your browser
-- Enter `localhost:3000`
+- Em um navegador moderno, navege para `localhost:3000`
 
 ### Tests
 
-To run the tests, open the terminal and enter the following command,
+Para rodar os testes, execute o seguinte comando,
 
 ```terminal
 yarn test
 ```
 
-Then follow the instructions provided
+E siga as intruções no terminal
 
 ## Authors
 
 👤 **Gustavo Carvalho**
 
 - GitHub: [@gscarv13](https://github.com/gscarv13)
-- Twitter: [@Gscarv13](https://twitter.com/Gscarv13)
-- LinkedIn: [Gustavo Carvalho](https://www.linkedin.com/in/gscarv13)
 
-## Acknowledgements
+👤 **Christiane Mary Mayeda**
+
+- GitHub: [@ChristianeMaryMayeda](https://github.com/ChristianeMaryMayeda)
+
+👤 **Douglas Dias Alves**
+
+- GitHub: [@DougPeD](https://github.com/DougPeD)
+
+👤 **Wagner Jesus**
+
+- GitHub: [@Wagner53426](https://github.com/Wagner53426)
+
+👤 **Regivaldo Silva**
+
+- GitHub: [@RegivaldoSilva](https://github.com/RegivaldoSilva)
 
 
-Thank You [Karsten Winegeart](https://unsplash.com/photos/pCS5YlrskC8) and [Ostap Senyuk](https://unsplash.com/photos/SW4BTHmSGQg)
-for your amazing photos on unsplash, and [Murat Korkmaz](https://www.behance.net/muratk) on Behance for his amazing UI design
+## Agradecimentos
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/gscarv13/ss-front-end/issues).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
+Obrigado [Karsten Winegeart](https://unsplash.com/photos/pCS5YlrskC8) e [Ostap Senyuk](https://unsplash.com/photos/SW4BTHmSGQg)
+pelas ótimas imagens no unsplash, e [Murat Korkmaz](https://www.behance.net/muratk) pelo design.
 
 ## 📝 License
 
